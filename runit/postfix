@@ -1,0 +1,13 @@
+#!/bin/bash
+# From: https://github.com/rubyists/runit-services/blob/master/etc/sv/postfix/run
+
+daemon_directory=`postconf -h daemon_directory`
+
+# make consistency check
+postfix check
+
+# run postmap
+postmap /etc/postfix/virtual
+
+# run postfix
+exec $daemon_directory/master

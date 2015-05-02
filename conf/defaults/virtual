@@ -1,0 +1,4 @@
+# /etc/postfix/virtual
+
+# Forwarding mapping, one from-to address pair per line. The format is:
+#     <forward-from-addr> <whitespace> <forward-to-addr>
