@@ -45,6 +45,7 @@ RUN \
 # Setup runit
 RUN mkdir /etc/service/postfix
 ADD runit/postfix /etc/service/postfix/run
+RUN chmod +x /etc/service/postfix/run
 
 RUN curl -L https://raw.githubusercontent.com/nakanaa/conf-fetcher/master/conf-fetcher.sh -o /etc/my_init.d/01_conf-fetcher.sh && chmod +x /etc/my_init.d/01_conf-fetcher.sh
 
